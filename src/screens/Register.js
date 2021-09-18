@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button} from 'react-native';
+import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, CheckBox } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 
@@ -10,33 +10,129 @@ import tailwind from 'tailwind-rn';
 
 const Register= ({navigation}) => {
   return (
-    <SafeAreaView style={tailwind('h-full bg-gray-50 px-96')}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
 
 
-            <View style={tailwind('flex flex-row justify-between items-center px-8')}> 
+            {/* The container */}
 
-            <Ionicons name="md-close-circle" size={32} color="green" />
-            <Text style={tailwind('text-green-600 text-2xl tracking-wider font-body')}> Sign Up </Text>  
+            <View style={tailwind('bg-white h-full rounded-lg')}>
 
-            <Text style={tailwind('text-green-600 text-lg tracking-wider font-body')}> Login </Text>    
+
+   
+
+
+          {/* The navigational bar section */}
+
+            <View style={tailwind('flex flex-row justify-between items-center px-3 mt-4')}> 
+
+            <Ionicons name="md-close" size={24} color="gray" />
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wide font-body font-black')}> Sign Up </Text>  
+
+            <Text 
+
+          onPress={() => navigation.navigate('Login')}
+            
+            style={tailwind('text-green-500 text-xl font-black tracking-wider font-body')}> 
+            
+            Login 
+            
+            </Text>    
         
             </View>
 
+            {/* End of the navigational bar */}
+
            
-		
-        <Button
-            onPress={() => navigation.navigate('Login')}
-            title="Register"
-            style={tailwind('m-auto text-white')}
+        {/* The form section */}
 
-            >
+        <View  style={tailwind('mt-48 px-3 justify-center')}>
+
+        <TextInput
+        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        placeholder="Name"
+          />
+
+        <TextInput
+        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        placeholder="Email"
+          />
+
+        <TextInput
+        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 mt-8 rounded-lg text-lg font-body tracking-wider')}
+        placeholder="Password"
+     
+          />
+
+          
+
+          <View style={tailwind('mt-12 flex flex-row justify-between items-center px-3')}>
+
+          <CheckBox
+  
+         
+          style={tailwind('bg-gray-100')}
+        />
+        <Text style={tailwind('text-xs font-body font-medium text-gray-600')}>I would Like to Recieve additional NewsLetter and Promotion</Text>
+            
+          
+          </View>
+
+          {/* The sign up botton starts */}
+
+          <View style={tailwind('mt-12')}>
+
+  
+            <Text 
+
+            onPress={() => navigation.navigate('YourFarm')}
+            
+            style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
+            
+            Register
+            </Text>
+
+            </View>
+
+            {/* The sign up button ends */}
+
+            <Text 
+            onPress={() => navigation.navigate('ResetPassword')}
+            style={tailwind('mt-12 text-green-600 text-lg tracking-wider font-body text-center')}> Forgot Password </Text>  
+     
+
+          </View>
+
+            {/* End of the form section */}
 
 
-            </Button>
+     
+            
+            </View>
+
+            {/* End of the container */} 
 
 	</SafeAreaView>
   );
 }
 
+const styles = StyleSheet.create({
+  container: {
+   
+    paddingLeft:600,
+    paddingRight:600,
+
+  },
+
+  btn: {
+   
+    backgroundColor:'#72A320',
+
+  },
+
+  text:{
+    color:'#72A320',
+  },
+ 
+});
 
 export default Register

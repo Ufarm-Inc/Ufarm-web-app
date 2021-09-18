@@ -7,6 +7,9 @@ import {SafeAreaView, View, Text, Button} from 'react-native';
 import Landing from './src/screens/Landing'
 import Register from './src/screens/Register'
 import Login from './src/screens/Login'
+import ResetPassword from './src/screens/ResetPassword'
+import YourFarm from './src/screens/YourFarm'
+
 
 
 // Tailwinds Import
@@ -32,9 +35,12 @@ const App = ()=> {
   }} 
   
   initialRouteName="Landing">
+
 	  <Stack.Screen name="Landing" component={Landing}  />
 	  <Stack.Screen name="Register" component={Register}  />
 	  <Stack.Screen name="Login" component={Login}  />
+	  <Stack.Screen name="ResetPassword" component={ResetPassword}  />
+	  <Stack.Screen name="YourFarm" component={YourFarm}  />
 
 	</Stack.Navigator>
   </NavigationContainer>

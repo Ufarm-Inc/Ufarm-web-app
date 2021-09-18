@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button} from 'react-native';
+import {SafeAreaView, View, Text, Button, StyleSheet, Image} from 'react-native';
 
 import tailwind from 'tailwind-rn';
 
@@ -8,26 +8,51 @@ import tailwind from 'tailwind-rn';
 
 const Landing= ({navigation}) => {
   return (
-    <SafeAreaView style={tailwind('h-full bg-gray-50')}>
-		<View style={tailwind('mt-60 flex justify-center items-center')}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} >
 
 
-        <Text style={tailwind('text-green-600 tracking-wider text-lg')}> Landing </Text>
+      {/* The container */}
+		<View style={tailwind('bg-white h-full rounded-lg justify-center px-4')}>
 
-		
-        <Button
-            onPress={() => navigation.navigate('Register')}
-            title="Get started"
-            style={tailwind('mt-3 text-white')}
 
-            >
+        <Image source={require('../../assets/ufarmlogo.png')}
+              style={tailwind('flex flex-row h-52 w-52 justify-center items-center')}
+        />
 
-            </Button>
+
+          <View style={tailwind('mt-24')}> 
+    
+          <Text 
+
+          onPress={() => navigation.navigate('Register')}
+
+          style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
+
+          Get started
+          </Text>
+
+            </View>
             
 		</View>
+
+    {/* End of the container */}
 	</SafeAreaView>
   );
 }
+const styles = StyleSheet.create({
+  container: {
+   
+    paddingLeft:600,
+    paddingRight:600,
 
+  },
+
+  btn: {
+   
+    backgroundColor:'#72A320',
+
+  },
+ 
+});
 
 export default Landing
