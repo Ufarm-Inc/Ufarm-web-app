@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, Image} from 'react-native';
+import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, CheckBox} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
@@ -8,14 +8,13 @@ import { Ionicons } from '@expo/vector-icons';
 import Landing from './Landing'
 import Register from './Register'
 
-
 import tailwind from 'tailwind-rn';
 
 const Tab = createBottomTabNavigator();
 
 
 
-const YourFarm = ({navigation}) => {
+const SettingsScreen = ({navigation}) => {
   return (
 
     <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
@@ -33,7 +32,7 @@ const YourFarm = ({navigation}) => {
 
     
           
-            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your Farm </Text>  
+            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Settings </Text>  
 
 
     
@@ -43,49 +42,37 @@ const YourFarm = ({navigation}) => {
            
         {/* The form section */}
 
-        <View  style={tailwind('mt-8 px-3 justify-center')}>
-
-          <Text style={tailwind('mt-8 text-gray-600 font-body tracking-wider text-lg font-bold')} >Farm Farang - Phetchaburi </Text>
-
-        <Image source={require('../../assets/plotimage1.png')}
-              style={tailwind('mt-8 flex flex-row h-64 w-full justify-center items-center')}
-        />
-
-          <Text style={tailwind('mt-8 text-gray-600 font-body tracking-wider text-lg')}> Start farming, select your vegetables and our next available plot will be allocated to you.  </Text>
+        <View  style={tailwind('mt-44 px-3 justify-center')}>
 
   
 
-    
+        <TextInput
+        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        placeholder="Email"
+          />
 
+
+        
 
           {/* The sign up botton starts */}
 
           <View style={tailwind('mt-12')}>
 
-            <Text 
-
-            onPress={() => navigation.navigate('Xplore')}
-            
-            style={[styles.btn, tailwind('py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
-
-            Start Farming
-
-            </Text>
-
-
-            
+  
             <Text 
 
             onPress={() => navigation.navigate('Landing')}
             
-            style={[styles.btn, tailwind('mt-8 py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
+            style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
             
-            Your Plots
+            Request Password Reset
             </Text>
 
             </View>
 
             {/* The sign up button ends */}
+
+            <Text style={tailwind('mt-12 text-gray-500 text-lg tracking-wider font-body text-center')}> An email will be sent to you shortly, please follow the instructions in the email to reset your password </Text>  
      
 
           </View>
@@ -130,4 +117,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default YourFarm
+export default SettingsScreen

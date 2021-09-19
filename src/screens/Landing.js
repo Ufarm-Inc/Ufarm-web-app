@@ -16,7 +16,7 @@ const Landing= ({navigation}) => {
 
 
         <Image source={require('../../assets/ufarmlogo.png')}
-              style={tailwind('flex flex-row h-52 w-52 justify-center items-center')}
+              style={tailwind('flex flex-row h-52 w-full object-cover object-center justify-center items-center')}
         />
 
 
@@ -24,7 +24,7 @@ const Landing= ({navigation}) => {
     
           <Text 
 
-          onPress={() => navigation.navigate('Register')}
+          onPress={() => navigation.navigate('Settings')}
 
           style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
 
