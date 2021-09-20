@@ -9,6 +9,12 @@ import Register from './src/screens/Register'
 import Login from './src/screens/Login'
 import ResetPassword from './src/screens/ResetPassword'
 import YourFarm from './src/screens/YourFarm'
+import YourPlots from './src/screens/YourPlots'
+
+import Explore from './src/screens/Explore'
+
+import Settings from './src/screens/Settings'
+
 
 
 
@@ -37,10 +43,23 @@ const App = ()=> {
   initialRouteName="Landing">
 
 	  <Stack.Screen name="Landing" component={Landing}  />
+
 	  <Stack.Screen name="Register" component={Register}  />
+
 	  <Stack.Screen name="Login" component={Login}  />
+
 	  <Stack.Screen name="ResetPassword" component={ResetPassword}  />
+
+
+
 	  <Stack.Screen name="YourFarm" component={YourFarm}  />
+
+	  <Stack.Screen name="YourPlots" component={YourPlots}  />
+
+	  <Stack.Screen name="Explore" component={Explore}  />
+
+	  <Stack.Screen name="Settings" component={Settings}  />
+
 
 	</Stack.Navigator>
   </NavigationContainer>

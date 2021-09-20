@@ -31,14 +31,18 @@ const YourFarm = ({navigation}) => {
 
           {/* The navigational bar section */}
 
-    
-          
-            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your Farm </Text>  
+          <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
+
+        <Text 
+        onPress={() => navigation.navigate('YourFarm')}
+
+        style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+
+        <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your Farm </Text> 
 
 
-    
 
-            {/* End of the navigational bar */}
+        </View>
 
            
         {/* The form section */}
@@ -64,7 +68,7 @@ const YourFarm = ({navigation}) => {
 
             <Text 
 
-            onPress={() => navigation.navigate('Xplore')}
+            onPress={() => navigation.navigate('Explore')}
             
             style={[styles.btn, tailwind('py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
 
@@ -76,7 +80,7 @@ const YourFarm = ({navigation}) => {
             
             <Text 
 
-            onPress={() => navigation.navigate('Landing')}
+            onPress={() => navigation.navigate('YourPlots')}
             
             style={[styles.btn, tailwind('mt-8 py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
             

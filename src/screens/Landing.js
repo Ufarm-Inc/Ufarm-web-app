@@ -24,7 +24,7 @@ const Landing= ({navigation}) => {
     
           <Text 
 
-          onPress={() => navigation.navigate('Settings')}
+          onPress={() => navigation.navigate('Register')}
 
           style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
 

@@ -5,9 +5,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 
-import YourFarm from './YourFarm'
-import Settings from './SettingsScreen'
-
+import Landing from './Landing'
+import Register from './Register'
 
 import tailwind from 'tailwind-rn';
 
@@ -15,7 +14,7 @@ const Tab = createBottomTabNavigator();
 
 
 
-const ExploreScreen = ({navigation}) => {
+const Settings = ({navigation}) => {
   return (
 
     <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
@@ -31,9 +30,12 @@ const ExploreScreen = ({navigation}) => {
 
           {/* The navigational bar section */}
 
-
+    
           
-            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Explore </Text>  
+            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Settings </Text>  
+
+
+    
 
             {/* End of the navigational bar */}
 
@@ -41,6 +43,16 @@ const ExploreScreen = ({navigation}) => {
         {/* The form section */}
 
         <View  style={tailwind('mt-44 px-3 justify-center')}>
+
+  
+
+        <TextInput
+        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        placeholder="Email"
+          />
+
+
+        
 
           {/* The sign up botton starts */}
 
@@ -105,4 +117,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default ExploreScreen
+export default Settings
