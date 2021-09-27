@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button, StyleSheet, Image} from 'react-native';
+import {SafeAreaView, View, Text, Button, Image} from 'react-native';
+import StyleSheet from 'react-native-media-query';
 
 import tailwind from 'tailwind-rn';
 
@@ -16,7 +17,7 @@ const Landing= ({navigation}) => {
 
 
         <Image source={require('../../assets/ufarmlogo.png')}
-              style={tailwind('flex flex-row h-52 w-full object-cover object-center justify-center items-center')}
+              style={tailwind('flex flex-row h-full w-full object-cover object-center justify-center items-center')}
         />
 
 
@@ -42,8 +43,17 @@ const Landing= ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
    
-    paddingLeft:600,
-    paddingRight:600,
+    paddingLeft:550,
+    paddingRight:550,
+    '@media (max-width: 200px)': {
+      paddingLeft:350,
+      paddingRight:350,
+  },
+
+  '@media (max-width: 200px)': {
+    paddingLeft:50,
+    paddingRight:50,
+},
 
   },
 
