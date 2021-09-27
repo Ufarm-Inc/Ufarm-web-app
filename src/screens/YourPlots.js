@@ -1,18 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {SafeAreaView, View, Text, StyleSheet,Image, FlatList} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Ionicons } from '@expo/vector-icons';
-
-import Landing from './Landing'
-import Register from './Register'
-
 
 import tailwind from 'tailwind-rn';
 
-const Tab = createBottomTabNavigator();
 
+import Tabs from './Tabs'
 
 
 const YourPlots = ({navigation}) => {
@@ -95,16 +88,9 @@ const YourPlots = ({navigation}) => {
      
 
             {/* End of the container */} 
+            <Tabs/>
 
-            <NavigationContainer
-            independent={true}
-            >
-      <Tab.Navigator>
-        <Tab.Screen name="Landing" component={Landing} />
-        <Tab.Screen name="Register" component={Register} />
-      </Tab.Navigator>
-    </NavigationContainer>
-
+           
 	</SafeAreaView>
 
   
