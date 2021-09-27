@@ -42,18 +42,19 @@ const Landing= ({navigation}) => {
 }
 const {ids, styles} = StyleSheet.create({
   container: {
-   
-    paddingLeft:550,
-    paddingRight:550,
-    '@media (max-width: 400px)': {
-      paddingLeft:50,
-      paddingRight:50,
+
+    paddingLeft:0,
+    paddingRight:0,
+
+    '@media (max-width: 411px)': {
+      paddingLeft:0,
+      paddingRight:0,
   },
 
-  '@media (max-width: 1200px)': {
-    paddingLeft:600,
-    paddingRight:600,
-},
+ 
+
+
+
 
   },
 
