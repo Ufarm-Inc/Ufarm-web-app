@@ -6,6 +6,7 @@ import tailwind from 'tailwind-rn';
 
 
 
+
 const Explore = ({navigation}) => {
 
     const Farm = [

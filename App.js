@@ -15,6 +15,8 @@ import Explore from './src/screens/Explore'
 
 import Settings from './src/screens/Settings'
 
+import Vegetables from './src/screens/Vegetables'
+
 
 
 
@@ -59,6 +61,8 @@ const App = ()=> {
 	  <Stack.Screen name="Explore" component={Explore}  />
 
 	  <Stack.Screen name="Settings" component={Settings}  />
+
+	  <Stack.Screen name="Vegetables" component={Vegetables}  />
 
 
 	</Stack.Navigator>

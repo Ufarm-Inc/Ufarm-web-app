@@ -5,34 +5,42 @@ import StyleSheet from 'react-native-media-query';
 
 import tailwind from 'tailwind-rn';
 
+// import {FlatListSlider} from 'react-native-flatlist-slider';
 
 
-const Landing= ({navigation}) => {
+const Confirm= ({navigation}) => {
+
+
+
   return (
+
+    
     <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} dataSet={{ media: ids.container }} >
 
 
       {/* The container */}
-		<View style={tailwind('bg-white h-full rounded-lg justify-center px-4')}>
+		<View style={tailwind('bg-white h-full rounded-lg px-4')}>
 
 
-        <Image source={require('../../assets/ufarmlogo.png')}
-              style={tailwind('flex flex-row h-96 w-full object-cover object-center justify-center items-center')}
-        />
+                {/* The navigational bar section */}
+
+          <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
+
+            <Text 
+            onPress={() => navigation.navigate('YourFarm')}
+
+            style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Confirm vegetable Selection </Text> 
 
 
-          <View style={tailwind('mt-24')}> 
-    
-          <Text 
-
-          onPress={() => navigation.navigate('Register')}
-
-          style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
-
-          Get started
-          </Text>
 
             </View>
+
+              {/* The navigational bar section Ends */}
+
+    
+
             
 		</View>
 
@@ -51,8 +59,8 @@ const {ids, styles} = StyleSheet.create({
   },
 
   '@media (max-width: 1200px)': {
-    paddingLeft:600,
-    paddingRight:600,
+    paddingLeft:800,
+    paddingRight:800,
 },
 
   },
@@ -65,4 +73,4 @@ const {ids, styles} = StyleSheet.create({
  
 });
 
-export default Landing
+export default Confirm

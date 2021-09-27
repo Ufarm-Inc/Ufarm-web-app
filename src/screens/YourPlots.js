@@ -65,11 +65,15 @@ const YourPlots = ({navigation}) => {
 
   <View style={tailwind(' justify-between items-center px-3 py-3')}>
      <Image source={item.img}
+     
       style={tailwind('h-72 w-full rounded-md object-cover object-center')}
       
 />
 
-<Text style={tailwind('mt-3 text-gray-600 text-xl tracking-wider')}> {item.text} </Text>
+<Text 
+
+onPress={() => navigation.navigate('Vegetables')}
+style={tailwind('mt-3 text-gray-600 text-xl tracking-wider')}> {item.text} </Text>
 
     </View>
 
