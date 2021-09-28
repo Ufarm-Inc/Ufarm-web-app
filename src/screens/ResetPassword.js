@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, CheckBox} from 'react-native';
+import {SafeAreaView, View, Text, Button, TextInput, CheckBox} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import StyleSheet from 'react-native-media-query';
 
 import tailwind from 'tailwind-rn';
 
@@ -10,7 +11,7 @@ import tailwind from 'tailwind-rn';
 const ResetPassword= ({navigation}) => {
   return (
 
-    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} dataSet={{ media: ids.container }}>
 
 
             {/* The container */}
@@ -85,11 +86,16 @@ const ResetPassword= ({navigation}) => {
   );
 }
 
-const styles = StyleSheet.create({
+const {ids, styles} = StyleSheet.create({
   container: {
    
     paddingLeft:600,
     paddingRight:600,
+
+    '@media (min-width: 320px)': {
+      paddingLeft:0,
+      paddingRight:0,
+  },
 
   },
 

@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, CheckBox } from 'react-native';
+import {SafeAreaView, View, Text, Button, TextInput, CheckBox } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+
+import StyleSheet from 'react-native-media-query';
 
 
 import tailwind from 'tailwind-rn';
@@ -10,7 +12,7 @@ import tailwind from 'tailwind-rn';
 
 const Register= ({navigation}) => {
   return (
-    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} dataSet={{ media: ids.container }}>
 
 
             {/* The container */}
@@ -115,11 +117,16 @@ const Register= ({navigation}) => {
   );
 }
 
-const styles = StyleSheet.create({
+const {ids, styles} = StyleSheet.create({
   container: {
    
-    paddingLeft:600,
-    paddingRight:600,
+    paddingLeft:0,
+    paddingRight:0,
+
+    '@media (min-width: 320px)': {
+      paddingLeft:0,
+      paddingRight:0,
+  },
 
   },
 

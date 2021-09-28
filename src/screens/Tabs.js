@@ -22,7 +22,7 @@ const Tabs = () =>{
         
   <Tab.Navigator
     
-    tabBarOptions ={{
+    screenOptions ={{
 
             showLabel:true,
             style:{

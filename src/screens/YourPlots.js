@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, StyleSheet,Image, FlatList} from 'react-native';
+import {SafeAreaView, View, Text,Image, FlatList} from 'react-native';
+import StyleSheet from 'react-native-media-query';
 
 import tailwind from 'tailwind-rn';
 
@@ -28,7 +29,7 @@ const YourPlots = ({navigation}) => {
     ]
   return (
 
-    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} dataSet={{ media: ids.container }}>
 
 
             {/* The container */}
@@ -92,7 +93,7 @@ style={tailwind('mt-3 text-gray-600 text-xl tracking-wider')}> {item.text} </Tex
      
 
             {/* End of the container */} 
-            <Tabs/>
+    
 
            
 	</SafeAreaView>
@@ -101,11 +102,15 @@ style={tailwind('mt-3 text-gray-600 text-xl tracking-wider')}> {item.text} </Tex
   );
 }
 
-const styles = StyleSheet.create({
+const {ids, styles} = StyleSheet.create({
   container: {
    
     paddingLeft:600,
     paddingRight:600,
+    '@media (min-width: 320px)': {
+      paddingLeft:0,
+      paddingRight:0,
+  },
 
   },
 

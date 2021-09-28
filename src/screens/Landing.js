@@ -46,12 +46,12 @@ const {ids, styles} = StyleSheet.create({
     paddingLeft:0,
     paddingRight:0,
 
-    '@media (max-width: 411px)': {
+    '@media (min-width: 320px)': {
       paddingLeft:0,
       paddingRight:0,
   },
 
- 
+
 
 
 
