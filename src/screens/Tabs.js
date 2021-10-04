@@ -11,7 +11,7 @@ import YourFarm from './YourFarm'
 import Settings from './Settings'
 
 
-const Tabs = () =>{
+const Tabs = ({navigation}) =>{
 
     return(
 

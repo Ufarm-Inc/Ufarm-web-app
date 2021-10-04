@@ -6,7 +6,6 @@ import StyleSheet from 'react-native-media-query';
 import tailwind from 'tailwind-rn';
 
 
-import Tabs from './Tabs'
 
 
 const YourPlots = ({navigation}) => {

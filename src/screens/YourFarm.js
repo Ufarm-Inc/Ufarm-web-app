@@ -3,11 +3,7 @@ import React from 'react';
 import {SafeAreaView, View, Text, Button, TextInput, Image} from 'react-native';
 
 import { Ionicons } from '@expo/vector-icons';
-
 import StyleSheet from 'react-native-media-query';
-
-
-import Tabs from './Tabs'
 
 import tailwind from 'tailwind-rn';
 
@@ -101,6 +97,7 @@ const YourFarm = ({navigation}) => {
             </View>
 
             {/* End of the container */} 
+
 
   
 

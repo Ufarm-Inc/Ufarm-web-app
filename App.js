@@ -2,6 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {SafeAreaView, View, Text, Button} from 'react-native';
 
+import * as Linking from 'expo-linking';
+
+
+
 // Screen imports
 
 import Landing from './src/screens/Landing'
@@ -16,7 +20,7 @@ import Explore from './src/screens/Explore'
 import Settings from './src/screens/Settings'
 
 import Vegetables from './src/screens/Vegetables'
-
+import BottomTabs from './src/components/Tabs'
 
 
 
@@ -35,7 +39,17 @@ const Stack = createStackNavigator();
 
 const App = ()=> {
   return (
+
+	<>
+
+
+
 	<NavigationContainer>
+
+	{/* <Tabs/> */}
+
+
+
 	<Stack.Navigator 
 
 	screenOptions={{
@@ -54,19 +68,20 @@ const App = ()=> {
 
 
 
-	  <Stack.Screen name="YourFarm" component={YourFarm}  />
+	  <Stack.Screen name="YourFarm" component={BottomTabs}  />
 
-	  <Stack.Screen name="YourPlots" component={YourPlots}  />
+	  <Stack.Screen name="YourPlots" component={BottomTabs}  />
 
-	  <Stack.Screen name="Explore" component={Explore}  />
+	  <Stack.Screen name="Explore" component={BottomTabs}  />
 
-	  <Stack.Screen name="Settings" component={Settings}  />
+	  <Stack.Screen name="Settings" component={BottomTabs}  />
 
-	  <Stack.Screen name="Vegetables" component={Vegetables}  />
-
+	  <Stack.Screen name="Vegetables" component={BottomTabs}  />
 
 	</Stack.Navigator>
   </NavigationContainer>
+
+  </>
   );
 }
 
