@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {SafeAreaView, View, Text, Button, StyleSheet, TextInput, CheckBox} from 'react-native';
+import {SafeAreaView, View, Text, Button, TextInput, CheckBox} from 'react-native';
+
+import StyleSheet from 'react-native-media-query';
 
 
 import tailwind from 'tailwind-rn';
@@ -8,44 +10,55 @@ import tailwind from 'tailwind-rn';
 
 
 
-const Settings = ({navigation}) => {
+const Setty = ({navigation}) => {
   return (
 
-    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]}>
+    <SafeAreaView style={[styles.container, tailwind('bg-gray-50 h-full')]} dataSet={{ media: ids.container }} >
 
 
             {/* The container */}
 
             <View style={tailwind('bg-white h-full rounded-lg')}>
 
+               {/* The navigational bar section */}
 
-   
+            <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-32')}>
+
+                <Text 
+                onPress={() => navigation.goBack()}
+
+                style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+
+                <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Settings </Text> 
 
 
-          {/* The navigational bar section */}
 
-    
-          
-            <Text style={tailwind('mt-6 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Settings </Text>  
+                </View>
 
-
-    
-
-            {/* End of the navigational bar */}
-
+{/* End of the navigational bar */}
            
         {/* The form section */}
 
         <View  style={tailwind('mt-44 px-3 justify-center')}>
 
-  
+          <View style={tailwind('py-6 px-16 justify-between flex flex-row')}>
+          
+          <CheckBox
+              
+              />
 
-        <TextInput
-        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
-        placeholder="Email"
-          />
+              <Text style={tailwind('text-lg tracking-wider font-body text-blue-600 font-bold')}> Notification Settings </Text>
 
+            </View>
 
+            <View style={tailwind('py-6 px-16 justify-between flex flex-row')}>
+      
+                <CheckBox
+              
+                />
+
+              <Text style={tailwind('text-lg pr-20  tracking-wider font-body text-blue-600 font-bold')}> NewsLetter </Text>
+        </View>
         
 
           {/* The sign up botton starts */}
@@ -55,18 +68,27 @@ const Settings = ({navigation}) => {
   
             <Text 
 
-            onPress={() => navigation.navigate('Landing')}
+            onPress={() => navigation.goBack()}
             
-            style={[styles.btn, tailwind('py-3 px-3 rounded-md font-black text-lg tracking-wider text-center text-white')]} > 
+            style={[styles.btn, tailwind('py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
             
-            Request Password Reset
+            Change Email
+            </Text>
+
+            <Text 
+
+            onPress={() => navigation.goBack()}
+
+            style={[styles.btn, tailwind('py-3 px-3 mt-8 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
+
+            Contact Support
             </Text>
 
             </View>
 
             {/* The sign up button ends */}
 
-            <Text style={tailwind('mt-12 text-gray-500 text-lg tracking-wider font-body text-center')}> An email will be sent to you shortly, please follow the instructions in the email to reset your password </Text>  
+           
      
 
           </View>
@@ -88,11 +110,15 @@ const Settings = ({navigation}) => {
   );
 }
 
-const styles = StyleSheet.create({
+const {ids, styles} = StyleSheet.create({
   container: {
    
     paddingLeft:600,
     paddingRight:600,
+    '@media (min-width: 320px)': {
+      paddingLeft:0,
+      paddingRight:0,
+  },
 
   },
 
@@ -104,4 +130,4 @@ const styles = StyleSheet.create({
 
 })
 
-export default Settings
+export default Setty

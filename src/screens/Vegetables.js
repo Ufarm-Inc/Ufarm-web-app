@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {SafeAreaView, View, Text, Button, Image} from 'react-native';
 import StyleSheet from 'react-native-media-query';
-
 import tailwind from 'tailwind-rn';
 
 // import {FlatListSlider} from 'react-native-flatlist-slider';

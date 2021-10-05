@@ -29,7 +29,7 @@ const YourFarm = ({navigation}) => {
           <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
 
         <Text 
-        onPress={() => navigation.navigate('YourFarm')}
+       onPress={() => navigation.goBack()}
 
         style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
 
@@ -42,9 +42,9 @@ const YourFarm = ({navigation}) => {
            
         {/* The form section */}
 
-        <View  style={tailwind('mt-8 px-3 justify-center')}>
+        <View  style={tailwind('mt-3 px-3 justify-center')}>
 
-          <Text style={tailwind('mt-8 text-gray-600 font-body tracking-wider text-lg font-bold')} >Farm Farang - Phetchaburi </Text>
+          <Text style={tailwind('mt-4 text-gray-600 font-body tracking-wider text-lg font-bold')} >Farm Farang - Phetchaburi </Text>
 
         <Image source={require('../../assets/plotimage1.png')}
               style={tailwind('mt-8 flex flex-row h-64 w-full justify-center items-center')}
@@ -59,7 +59,7 @@ const YourFarm = ({navigation}) => {
 
           {/* The sign up botton starts */}
 
-          <View style={tailwind('mt-12')}>
+          <View style={tailwind('mt-4')}>
 
             <Text 
 

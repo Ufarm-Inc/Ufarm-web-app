@@ -41,8 +41,20 @@ const Explore = ({navigation}) => {
 
           {/* The navigational bar section */}
 
+          <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-32')}>
+
+          <Text 
+       onPress={() => navigation.goBack()}
+
+        style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+
+
+          <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Explore </Text>  
+
+          </View>
+
         
-            <Text style={tailwind('mt-2 text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Explore </Text>  
+          
 
             {/* End of the navigational bar */}
 
@@ -69,7 +81,7 @@ const Explore = ({navigation}) => {
 
         <FlatList
 
-        style={tailwind('mt-6')}
+        style={tailwind('mt-3')}
         keyExtractor={item => item.id}
         data={Farm}
         renderItem={({item})=>(
