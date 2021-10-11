@@ -20,10 +20,6 @@ const YourFarm = ({navigation}) => {
 
             <View style={tailwind('bg-white h-full rounded-lg')}>
 
-
-   
-
-
           {/* The navigational bar section */}
 
           <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
@@ -31,9 +27,9 @@ const YourFarm = ({navigation}) => {
         <Text 
        onPress={() => navigation.goBack()}
 
-        style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+        style={tailwind('text-green-500 text-lg  font-black')}> Back </Text>  
 
-        <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your Farm </Text> 
+        <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-black')}> Your Farm </Text> 
 
 
 
@@ -44,13 +40,14 @@ const YourFarm = ({navigation}) => {
 
         <View  style={tailwind('mt-3 px-3 justify-center')}>
 
-          <Text style={tailwind('mt-4 text-gray-600 font-body tracking-wider text-lg font-bold')} >Farm Farang - Phetchaburi </Text>
+          <Text style={tailwind('mt-4 text-gray-600 tracking-wider text-lg font-bold')} >Farm Farang - Phetchaburi </Text>
 
         <Image source={require('../../assets/plotimage1.png')}
               style={tailwind('mt-8 flex flex-row h-64 w-full justify-center items-center')}
+              resizeMode="cover"
         />
 
-          <Text style={tailwind('mt-8 text-gray-600 font-body tracking-wider text-lg')}> Start farming, select your vegetables and our next available plot will be allocated to you.  </Text>
+          <Text style={tailwind('mt-8 text-gray-600 tracking-wider text-lg')}> Start farming, select your vegetables and our next available plot will be allocated to you.  </Text>
 
   
 
@@ -77,7 +74,7 @@ const YourFarm = ({navigation}) => {
 
             onPress={() => navigation.navigate('YourPlots')}
             
-            style={[styles.btn, tailwind('mt-8 py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
+            style={[styles.btn, tailwind('mt-4 py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
             
             Your Plots
             </Text>

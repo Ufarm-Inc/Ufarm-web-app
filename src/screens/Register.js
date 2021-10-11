@@ -28,13 +28,13 @@ const Register= ({navigation}) => {
             <View style={tailwind('flex flex-row justify-between items-center px-3 mt-4')}> 
 
             <Ionicons name="md-close" size={24} color="gray" />
-            <Text style={tailwind('text-gray-900 text-3xl tracking-wide font-body font-black')}> Sign Up </Text>  
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wide font-black')}> Sign Up </Text>  
 
             <Text 
 
           onPress={() => navigation.navigate('Login')}
             
-            style={tailwind('text-green-500 text-xl font-black tracking-wider font-body')}> 
+            style={tailwind('text-green-500 text-xl font-black tracking-wider')}> 
             
             Login 
             
@@ -50,17 +50,17 @@ const Register= ({navigation}) => {
         <View  style={tailwind('mt-48 px-3 justify-center')}>
 
         <TextInput
-        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 rounded-lg text-lg tracking-wider')}
         placeholder="Name"
           />
 
         <TextInput
-        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg tracking-wider')}
         placeholder="Email"
           />
 
         <TextInput
-        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 mt-8 rounded-lg text-lg font-body tracking-wider')}
+        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 mt-8 rounded-lg text-lg tracking-wider')}
         placeholder="Password"
      
           />
@@ -74,7 +74,7 @@ const Register= ({navigation}) => {
          
           style={tailwind('bg-gray-100')}
         />
-        <Text style={tailwind('text-xs font-body font-medium text-gray-600')}>I would Like to Recieve additional NewsLetter and Promotion</Text>
+        <Text style={tailwind('text-xs font-medium text-gray-600')}>I would Like to Recieve additional NewsLetter and Promotion</Text>
             
           
           </View>
@@ -99,7 +99,7 @@ const Register= ({navigation}) => {
 
             <Text 
             onPress={() => navigation.navigate('ResetPassword')}
-            style={tailwind('mt-12 text-green-600 text-lg tracking-wider font-body text-center')}> Forgot Password </Text>  
+            style={tailwind('mt-12 text-green-600 text-lg tracking-wider text-center')}> Forgot Password </Text>  
      
 
           </View>

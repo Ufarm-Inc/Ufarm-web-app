@@ -41,7 +41,7 @@ const Explore = ({navigation}) => {
 
           {/* The navigational bar section */}
 
-          <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-32')}>
+          <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
 
           <Text 
        onPress={() => navigation.goBack()}
@@ -65,6 +65,7 @@ const Explore = ({navigation}) => {
 
         <Image source={require('../../assets/bangkokmap1.png')}
               style={tailwind('mt-8 flex flex-row h-80 w-full justify-center items-center')}
+              resizeMode="cover"
 
               
         />
@@ -89,6 +90,7 @@ const Explore = ({navigation}) => {
           <View style={tailwind('flex flex-row justify-between items-center')}>
              <Image source={require('../../assets/bangkokmap1.png')}
               style={tailwind('h-12 w-12 rounded-md ')}
+              resizeMode="cover"
               
         />
 

@@ -17,8 +17,10 @@ const Landing= ({navigation}) => {
 
 
         <Image source={require('../../assets/ufarmlogo.png')}
-              style={tailwind('flex flex-row h-96 w-full object-cover object-center justify-center items-center')}
-        />
+              style={tailwind('flex flex-row h-96 w-full justify-center items-center')} 
+              resizeMode="contain"
+              
+              />
 
 
           <View style={tailwind('mt-24')}> 
@@ -53,14 +55,17 @@ const {ids, styles} = StyleSheet.create({
 
 
 
-
-
-
   },
 
   btn: {
    
     backgroundColor:'#72A320',
+
+  },
+
+  img: {
+   
+    backgroundSize:'contain',
 
   },
  

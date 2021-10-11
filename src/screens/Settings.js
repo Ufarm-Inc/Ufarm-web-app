@@ -27,9 +27,9 @@ const Setty = ({navigation}) => {
                 <Text 
                 onPress={() => navigation.goBack()}
 
-                style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+                style={tailwind('text-green-500 text-lg font-black')}> Back </Text>  
 
-                <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Settings </Text> 
+                <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-black')}> Settings </Text> 
 
 
 
@@ -47,7 +47,7 @@ const Setty = ({navigation}) => {
               
               />
 
-              <Text style={tailwind('text-lg tracking-wider font-body text-blue-600 font-bold')}> Notification Settings </Text>
+              <Text style={tailwind('text-lg tracking-wider text-blue-600 font-bold')}> Notification Settings </Text>
 
             </View>
 
@@ -57,7 +57,7 @@ const Setty = ({navigation}) => {
               
                 />
 
-              <Text style={tailwind('text-lg pr-20  tracking-wider font-body text-blue-600 font-bold')}> NewsLetter </Text>
+              <Text style={tailwind('text-lg pr-20  tracking-wider text-blue-600 font-bold')}> NewsLetter </Text>
         </View>
         
 

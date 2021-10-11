@@ -46,9 +46,9 @@ const YourPlots = ({navigation}) => {
             <Text 
             onPress={() => navigation.navigate('YourFarm')}
             
-            style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+            style={tailwind('text-green-500 text-lg font-black')}> Back </Text>  
 
-            <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your plots </Text> 
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-black')}> Your plots </Text> 
 
         
 
@@ -67,6 +67,7 @@ const YourPlots = ({navigation}) => {
      <Image source={item.img}
      
       style={tailwind('h-72 w-full rounded-md object-cover object-center')}
+      resizeMode="cover"
       
 />
 

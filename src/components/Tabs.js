@@ -68,13 +68,13 @@ screenOptions={({ route }) => ({
 
 
     options={{
-      tabBarShowLabel:false,
+      
       tabBarIcon: ({ focused }) => {
         
 
         return(
 
-          <View style={{alignItems:'center', justifyContent:'center',}}>
+          <View style={{alignItems:'center', justifyContent:'center'}}>
           <Image 
           source={require('../../assets/Path46.png')} 
           resizeMode= 'contain'

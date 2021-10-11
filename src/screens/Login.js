@@ -28,13 +28,13 @@ const Login= ({navigation}) => {
             <View style={tailwind('flex flex-row justify-between items-center px-3 mt-4')}> 
 
             <Ionicons name="md-close" size={24} color="gray" />
-            <Text style={tailwind('text-gray-900 text-3xl tracking-wide font-body font-black')}> Login </Text>  
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wide font-black')}> Login </Text>  
 
             <Text 
 
           onPress={() => navigation.navigate('Register')}
             
-            style={tailwind('text-green-500 text-xl font-black tracking-wider font-body')}> 
+            style={tailwind('text-green-500 text-xl font-black tracking-wider ')}> 
             
             Register 
             
@@ -52,12 +52,12 @@ const Login= ({navigation}) => {
   
 
         <TextInput
-        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg font-body tracking-wider')}
+        style={tailwind('bg-gray-100 mt-8 h-12 p-6 text-gray-800 rounded-lg text-lg tracking-wider')}
         placeholder="Email"
           />
 
         <TextInput
-        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 mt-8 rounded-lg text-lg font-body tracking-wider')}
+        style={tailwind('bg-gray-100 h-12 p-6 text-gray-800 mt-8 rounded-lg text-lg tracking-wider')}
         placeholder="Password"
      
           />
@@ -86,7 +86,7 @@ const Login= ({navigation}) => {
 
             <Text 
             onPress={() => navigation.navigate('ResetPassword')}
-            style={tailwind('mt-12 text-green-600 text-lg tracking-wider font-body text-center')}> 
+            style={tailwind('mt-12 text-green-600 text-lg tracking-wider text-center')}> 
             Forgot Password </Text>  
      
 
