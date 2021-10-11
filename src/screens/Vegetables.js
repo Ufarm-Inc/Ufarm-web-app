@@ -4,23 +4,22 @@ import {SafeAreaView, View, Text, Button, Image} from 'react-native';
 import StyleSheet from 'react-native-media-query';
 import tailwind from 'tailwind-rn';
 
-// import {FlatListSlider} from 'react-native-flatlist-slider';
+import Carousel from 'react-native-snap-carousel';
+import BannerSlider from '../components/BannerSlider';
+import { windowWidth } from '../../utils/Dimensions';
+import { sliderData } from '../../model/data';
 
 
 const Vegetables= ({navigation}) => {
 
+  const renderBanner  = ({item, index}) =>{
 
-    const images = [
-        {
-         image:'https://images.unsplash.com/photo-1567226475328-9d6baaf565cf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
-         desc: 'Silent Waters in the mountains in midst of Himilayas',
-        },
-       {
-         image:'https://images.unsplash.com/photo-1455620611406-966ca6889d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1130&q=80',
-         desc:
-           'Red fort in India New Delhi is a magnificient masterpeiece of humans',
-       },
-       ]
+      return <BannerSlider data={item}/>
+
+  }
+
+
+    
 
 
   return (
@@ -49,6 +48,16 @@ const Vegetables= ({navigation}) => {
             </View>
 
               {/* The navigational bar section Ends */}
+
+              <Carousel
+             ref={c => {
+              this._carousel = c;
+            }}
+              data={sliderData}
+              renderItem={renderBanner}
+              sliderWidth={windowWidth - 40 }
+              itemWidth={300}
+            />
 
     
 

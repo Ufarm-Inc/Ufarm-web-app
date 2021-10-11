@@ -8,7 +8,7 @@ import tailwind from 'tailwind-rn';
 
 
 
-const YourPlots = ({navigation}) => {
+const YourPlot = ({navigation}) => {
 
     const Plots = [
 
@@ -44,13 +44,11 @@ const YourPlots = ({navigation}) => {
             <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
 
             <Text 
-            onPress={() => navigation.navigate('YourFarm')}
+            onPress={() => navigation.goBack()}
             
             style={tailwind('text-green-500 text-lg font-black')}> Back </Text>  
 
             <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-black')}> Your plots </Text> 
-
-        
 
             </View>
 
@@ -122,4 +120,4 @@ const {ids, styles} = StyleSheet.create({
 
 })
 
-export default YourPlots
+export default YourPlot

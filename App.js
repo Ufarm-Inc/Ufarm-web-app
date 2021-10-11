@@ -13,7 +13,7 @@ import Register from './src/screens/Register'
 import Login from './src/screens/Login'
 import ResetPassword from './src/screens/ResetPassword'
 import YourFarm from './src/screens/YourFarm'
-import YourPlots from './src/screens/YourPlots'
+import YourPlot from './src/screens/YourPlots'
 
 import Explore from './src/screens/Explore'
 
@@ -70,13 +70,15 @@ const App = ()=> {
 
 	  <Stack.Screen name="YourFarm" component={BottomTabs}  />
 
-	  <Stack.Screen name="YourPlots" component={BottomTabs}  />
+	  <Stack.Screen name="YourPlot" component={YourPlot}  />
 
 	  <Stack.Screen name="Explore" component={BottomTabs}  />
 
 	  <Stack.Screen name="Settings" component={BottomTabs}  />
 
-	  <Stack.Screen name="Vegetables" component={BottomTabs}  />
+	  <Stack.Screen name="Vegetables" component={Vegetables}  />
+
+
 
 	</Stack.Navigator>
   </NavigationContainer>

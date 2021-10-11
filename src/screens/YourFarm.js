@@ -72,7 +72,7 @@ const YourFarm = ({navigation}) => {
             
             <Text 
 
-            onPress={() => navigation.navigate('YourPlots')}
+            onPress={() => navigation.navigate('YourPlot')}
             
             style={[styles.btn, tailwind('mt-4 py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
             
