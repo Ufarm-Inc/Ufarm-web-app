@@ -6,7 +6,7 @@ import StyleSheet from 'react-native-media-query';
 import tailwind from 'tailwind-rn';
 
 
-const Checkout= ({navigation}) => {
+const Payment= ({navigation}) => {
 
 
 
@@ -25,8 +25,8 @@ const Checkout= ({navigation}) => {
           <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-24')}>
 
             <Text 
+            
             onPress={() => navigation.goBack()}
-
             style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
 
             <Text style={tailwind('text-gray-900 text-2xl text-center font-black')}> Checkout </Text> 
@@ -40,7 +40,7 @@ const Checkout= ({navigation}) => {
 
               <Image 
               
-                source={require('../../assets/payment.png')}
+                source={require('../../assets/checkout.png')}
                 style={tailwind('mt-36 h-96 w-full rounded-md justify-center items-center')}
                 resizeMode="contain"
 
@@ -51,11 +51,9 @@ const Checkout= ({navigation}) => {
 
 
            
-            <Text 
-            onPress={() => navigation.navigate('Payment')}
-            style={[styles.btn, tailwind('rounded-full mt-3 px-4 py-4 text-white text-xl text-center font-medium tracking-wider')]}> Make Payment</Text>
+<Text style={[styles.btn, tailwind('rounded-full mt-3 px-4 py-4 text-white text-xl text-center font-medium tracking-wider')]}> View Your Plot</Text>
 
-            <Text style={ tailwind('mt-3 mb-3  text-blue-400 text-sm text-center font-medium tracking-wider')}> Plot Price and Payment Information</Text>
+
 
     
 
@@ -90,4 +88,4 @@ const {ids, styles} = StyleSheet.create({
  
 });
 
-export default Checkout
+export default Payment

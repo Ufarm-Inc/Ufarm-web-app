@@ -18,6 +18,8 @@ import Confirm from './src/screens/Confirm'
 
 import Checkout from './src/screens/Checkout'
 
+import Payment from './src/screens/Payment'
+
 import Explore from './src/screens/Explore'
 
 import Settings from './src/screens/Settings'
@@ -86,6 +88,8 @@ const App = ()=> {
 	  <Stack.Screen name="Confirm" component={Confirm}  />
 
 	  <Stack.Screen name="Checkout" component={Checkout}  />
+
+	  <Stack.Screen name="Payment" component={Payment}  />
 
 
 

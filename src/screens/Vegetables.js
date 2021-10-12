@@ -87,7 +87,10 @@ const Vegetables= ({navigation}) => {
             {/* End of the first carousel */}
 
            
-            <Text style={tailwind('mt-4 text-gray-600 text-xl text-center font-black')}> Select your Second vegetable</Text>
+            <Text 
+            
+            onPress={() => navigation.navigate('Confirm')}
+            style={tailwind('mt-4 text-gray-600 text-xl text-center font-black')}> Select your Second vegetable</Text>
 
             <View style={tailwind('mt-6')}>
               <Carousel
@@ -104,7 +107,10 @@ const Vegetables= ({navigation}) => {
             </View>
 
 
-            <Text style={tailwind(' mt-4 text-gray-600 text-xl text-center font-black')}> Select your Third vegetable</Text>
+            <Text 
+            
+            onPress={() => navigation.navigate('Confirm')}
+            style={tailwind(' mt-4 text-gray-600 text-xl text-center font-black')}> Select your Third vegetable</Text>
 
             <View style={tailwind('mt-6')}>
           

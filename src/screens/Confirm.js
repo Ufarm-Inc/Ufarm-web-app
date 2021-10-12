@@ -49,8 +49,8 @@ const Confirm= ({navigation}) => {
           <View style={tailwind('mt-4 flex flex-row px-2 justify-between items-center pr-2')}>
 
             <Text 
-            onPress={() => navigation.navigate('vegetables')}
-
+            
+            onPress={() => navigation.goBack()}
             style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
 
             <Text style={tailwind('text-gray-900 text-lg text-center font-black')}> Confirm vegetable Selection </Text> 
