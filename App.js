@@ -14,6 +14,9 @@ import Login from './src/screens/Login'
 import ResetPassword from './src/screens/ResetPassword'
 import YourFarm from './src/screens/YourFarm'
 import YourPlot from './src/screens/YourPlots'
+import Confirm from './src/screens/Confirm'
+
+import Checkout from './src/screens/Checkout'
 
 import Explore from './src/screens/Explore'
 
@@ -21,6 +24,8 @@ import Settings from './src/screens/Settings'
 
 import Vegetables from './src/screens/Vegetables'
 import BottomTabs from './src/components/Tabs'
+
+
 
 
 
@@ -77,6 +82,10 @@ const App = ()=> {
 	  <Stack.Screen name="Settings" component={BottomTabs}  />
 
 	  <Stack.Screen name="Vegetables" component={Vegetables}  />
+
+	  <Stack.Screen name="Confirm" component={Confirm}  />
+
+	  <Stack.Screen name="Checkout" component={Checkout}  />
 
 
 

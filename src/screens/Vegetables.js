@@ -12,6 +12,8 @@ import { sliderData } from '../../model/data';
 
 const Vegetables= ({navigation}) => {
 
+  const isCarousel = React.useRef(null)
+
   const renderBanner  = ({item, index}) =>{
 
       return <BannerSlider data={item}/>
@@ -19,7 +21,10 @@ const Vegetables= ({navigation}) => {
   }
 
 
-    
+
+
+
+
 
 
   return (
@@ -39,25 +44,82 @@ const Vegetables= ({navigation}) => {
             <Text 
             onPress={() => navigation.navigate('YourFarm')}
 
-            style={tailwind('text-green-500 text-lg  font-body font-black')}> Back </Text>  
+            style={tailwind('text-green-500 text-lg font-black')}> Back </Text>  
 
-            <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-body font-black')}> Your Farm </Text> 
+            <Text style={tailwind('text-gray-900 text-3xl tracking-wider text-center font-black')}> Your Farm </Text> 
 
 
 
             </View>
 
               {/* The navigational bar section Ends */}
+              
+            <Text style={tailwind('mt-6 text-gray-900 text-xl tracking-wider text-center font-black')}> Choose Up To Three vegetables For Your Plot</Text>
 
+
+          
+
+            {/* The first carousel */}
+
+            <Text 
+            
+            onPress={() => navigation.navigate('Confirm')}
+            style={tailwind('mt-4 text-gray-600 text-xl text-center font-black')}> Select your first vegetable</Text>
+
+          <View
+    
+          
+          style={tailwind('mt-6')}>
+         
               <Carousel
-             ref={c => {
-              this._carousel = c;
-            }}
+              ref={isCarousel}
               data={sliderData}
               renderItem={renderBanner}
               sliderWidth={windowWidth - 40 }
-              itemWidth={300}
+              itemWidth={250}
+        
+              useScrollView={false}
+              
             />
+
+            </View>
+
+            {/* End of the first carousel */}
+
+           
+            <Text style={tailwind('mt-4 text-gray-600 text-xl text-center font-black')}> Select your Second vegetable</Text>
+
+            <View style={tailwind('mt-6')}>
+              <Carousel
+              ref={isCarousel}
+              data={sliderData}
+              renderItem={renderBanner}
+              sliderWidth={windowWidth - 40 }
+              itemWidth={250}
+        
+              useScrollView={false}
+              
+            />
+
+            </View>
+
+
+            <Text style={tailwind(' mt-4 text-gray-600 text-xl text-center font-black')}> Select your Third vegetable</Text>
+
+            <View style={tailwind('mt-6')}>
+          
+              <Carousel
+              ref={isCarousel}
+              data={sliderData}
+              renderItem={renderBanner}
+              sliderWidth={windowWidth - 40 }
+              itemWidth={250}
+        
+              useScrollView={false}
+              
+            />
+
+            </View>
 
     
 
@@ -70,18 +132,16 @@ const Vegetables= ({navigation}) => {
 }
 const {ids, styles} = StyleSheet.create({
   container: {
-   
-    paddingLeft:550,
-    paddingRight:550,
-    '@media (max-width: 400px)': {
-      paddingLeft:50,
-      paddingRight:50,
+
+    paddingLeft:0,
+    paddingRight:0,
+
+    '@media (min-width: 320px)': {
+      paddingLeft:0,
+      paddingRight:0,
   },
 
-  '@media (max-width: 1200px)': {
-    paddingLeft:800,
-    paddingRight:800,
-},
+
 
   },
 
