@@ -60,7 +60,7 @@ const YourFarm = ({navigation}) => {
 
             <Text 
 
-            onPress={() => navigation.navigate('Explore')}
+            onPress={() => navigation.navigate('Vegetables')}
             
             style={[styles.btn, tailwind('py-3 px-3 rounded-full font-black text-lg tracking-wider text-center text-white')]} > 
 
