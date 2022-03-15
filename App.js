@@ -4,10 +4,9 @@ import {SafeAreaView, View, Text, Button} from 'react-native';
 
 import * as Linking from 'expo-linking';
 
-
 import { ApolloProvider } from 'react-apollo';
 import makeApolloClient from './src/apollo';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+
 
 // Screen imports
 
@@ -30,10 +29,6 @@ import Settings from './src/screens/Settings'
 import Vegetables from './src/screens/Vegetables'
 import BottomTabs from './src/components/Tabs'
 
-
-
-
-
 // Tailwinds Import
 
 import tailwind from 'tailwind-rn';
@@ -46,9 +41,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-const client = makeApolloClient();
+const client = makeApolloClient
 
 const App = ()=> {
+
 	
 
 	

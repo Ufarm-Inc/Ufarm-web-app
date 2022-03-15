@@ -9,6 +9,7 @@
     "postinstall": "python scripts/fix.py"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@apollo/react-hooks": "^4.0.0",
     "@react-native-async-storage/async-storage": "^1.16.1",
     "@react-navigation/bottom-tabs": "^6.0.5",
