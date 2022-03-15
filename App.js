@@ -5,6 +5,9 @@ import {SafeAreaView, View, Text, Button} from 'react-native';
 import * as Linking from 'expo-linking';
 
 
+import { ApolloProvider } from 'react-apollo';
+import makeApolloClient from '../apollo';
+
 
 // Screen imports
 
@@ -49,7 +52,7 @@ const App = ()=> {
 
 	<>
 
-
+	<ApolloProvider client={client}>
 
 	<NavigationContainer>
 
@@ -95,6 +98,8 @@ const App = ()=> {
 
 	</Stack.Navigator>
   </NavigationContainer>
+
+  </ApolloProvider>
 
   </>
   );
