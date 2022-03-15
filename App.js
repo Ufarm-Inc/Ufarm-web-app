@@ -7,7 +7,7 @@ import * as Linking from 'expo-linking';
 
 import { ApolloProvider } from 'react-apollo';
 import makeApolloClient from './src/apollo';
-import { AsyncStorage } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 // Screen imports
 
@@ -49,6 +49,7 @@ const Stack = createStackNavigator();
 const client = makeApolloClient();
 
 const App = ()=> {
+	
 
 	
   return (
