@@ -45,7 +45,18 @@ const client = makeApolloClient
 
 const App = ()=> {
 
-	
+	const [isToken, setisToken] =  React.useState('')
+
+	React.useEffect(() => {
+
+		const getToken = localStorage.getItem('token')
+
+		setisToken(getToken)
+
+		console.log(getToken)
+
+
+	});
 
 	
   return (
@@ -68,15 +79,10 @@ const App = ()=> {
   
   initialRouteName="Landing">
 
-	  <Stack.Screen name="Landing" component={Landing}  />
+<> 
 
-	  <Stack.Screen name="Register" component={Register}  />
-
-	  <Stack.Screen name="Login" component={Login}  />
-
-	  <Stack.Screen name="ResetPassword" component={ResetPassword}  />
-
-
+	  {isToken ? (
+	  <>
 
 	  <Stack.Screen name="YourFarm" component={BottomTabs}  />
 
@@ -94,7 +100,30 @@ const App = ()=> {
 
 	  <Stack.Screen name="Payment" component={Payment}  />
 
+	
+	  </>
+	
+	  ):(
 
+	
+
+  	<>  
+	  <Stack.Screen name="Landing" component={Landing}  />
+
+	  <Stack.Screen name="Register" component={Register}  />
+
+	  <Stack.Screen name="Login" component={Login}  />
+
+	  <Stack.Screen name="ResetPassword" component={ResetPassword}  />
+
+	  </>
+
+
+	  )}
+
+
+
+</>
 
 	</Stack.Navigator>
   </NavigationContainer>
