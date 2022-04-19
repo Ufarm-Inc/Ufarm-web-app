@@ -4,6 +4,7 @@ import {SafeAreaView, View, Text, Button, TextInput, CheckBox} from 'react-nativ
 import { Ionicons } from '@expo/vector-icons';
 
 import StyleSheet from 'react-native-media-query';
+import { useMutation } from '@apollo/client';
 
 import tailwind from 'tailwind-rn';
 

@@ -49,7 +49,9 @@ const App = ()=> {
 
 	React.useEffect(() => {
 
+
 		const getToken = localStorage.getItem('token')
+		
 
 		setisToken(getToken)
 
